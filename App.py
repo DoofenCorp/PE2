@@ -1,4 +1,3 @@
-import sys
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter.constants import *
@@ -29,8 +28,12 @@ class Toplevel1:
             os.system("python Video_enhance\\video.py")
 
         def heart():
-            os.system("explorer http://localhost:5000/ & python Heart_Disease\\heart_disease_app.py")
+            os.system(
+                "explorer http://localhost:5000/ & python Heart_Disease\\heart_disease_app.py")
 
+        def content():
+            webbrowser.open(
+                "https://colab.research.google.com/drive/1xwTac3pAWLg6ELxPRgnkkM_UWMua17ag?usp=sharing", 1, autoraise=True)
 
         def feed():
             data = self.F_Box.get()
@@ -134,6 +137,7 @@ class Toplevel1:
         self.App3.configure(highlightcolor="black")
         self.App3.configure(pady="0")
         self.App3.configure(text='''Content Generator''')
+        self.App3.configure(command=content)
 
         self.App4 = tk.Button(self.top)
         self.App4.place(relx=0.561, rely=0.478, height=44, width=257)
