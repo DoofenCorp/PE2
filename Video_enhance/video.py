@@ -1,6 +1,6 @@
 import cv2
 cameraCapture = cv2.VideoCapture(0)
-fps = 30
+fps = 70
 size = (int(cameraCapture.get(cv2.CAP_PROP_FRAME_WIDTH)),
         int(cameraCapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 videoWriter = cv2.VideoWriter(
