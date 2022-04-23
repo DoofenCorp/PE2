@@ -1,9 +1,9 @@
-from stat import FILE_ATTRIBUTE_NOT_CONTENT_INDEXED
 import sys
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter.constants import *
 import os
+import webbrowser
 
 import App_support
 
@@ -27,6 +27,10 @@ class Toplevel1:
 
         def enhance():
             os.system("python Video_enhance\\video.py")
+
+        def heart():
+            os.system("explorer http://localhost:5000/ & python Heart_Disease\\heart_disease_app.py")
+
 
         def feed():
             data = self.F_Box.get()
@@ -146,6 +150,7 @@ class Toplevel1:
         self.App4.configure(highlightcolor="black")
         self.App4.configure(pady="0")
         self.App4.configure(text='''Heart Disease Predictor''')
+        self.App4.configure(command=heart)
 
         self.App5 = tk.Button(self.top)
         self.App5.place(relx=0.311, rely=0.619, height=44, width=257)
